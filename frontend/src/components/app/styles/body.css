@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body {
+  font: 13px/21px "Open Sans", Arial, sans-serif !important;
+  color: #666 !important;
+}
+
+.container {
+    padding-top: 1em;
+    padding-bottom: 4em;
+    width: 95%;
+    margin: 0 auto;
+  }
