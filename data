@@ -5,16 +5,16 @@
   "port" : 80,
   "calls" : [ {
     "statusCode" : 200,
-    "latency" : 371,
-    "date" : "04/10/2020 23:16:04"
+    "latency" : 363,
+    "date" : "04/10/2020 23:18:19"
   }, {
     "statusCode" : 200,
-    "latency" : 393,
-    "date" : "04/10/2020 23:16:09"
+    "latency" : 352,
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 200,
-    "latency" : 362,
-    "date" : "04/10/2020 23:16:14"
+    "latency" : 358,
+    "date" : "04/10/2020 23:18:29"
   } ]
 }, {
   "name" : "Aversionmedia",
@@ -23,16 +23,16 @@
   "port" : 80,
   "calls" : [ {
     "statusCode" : 200,
-    "latency" : 120,
-    "date" : "04/10/2020 23:16:04"
+    "latency" : 128,
+    "date" : "04/10/2020 23:18:19"
   }, {
     "statusCode" : 200,
-    "latency" : 121,
-    "date" : "04/10/2020 23:16:09"
+    "latency" : 122,
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 200,
-    "latency" : 127,
-    "date" : "04/10/2020 23:16:14"
+    "latency" : 128,
+    "date" : "04/10/2020 23:18:29"
   } ]
 }, {
   "name" : "Google",
@@ -41,16 +41,16 @@
   "port" : 443,
   "calls" : [ {
     "statusCode" : 200,
-    "latency" : 136,
-    "date" : "04/10/2020 23:16:04"
+    "latency" : 138,
+    "date" : "04/10/2020 23:18:19"
+  }, {
+    "statusCode" : 200,
+    "latency" : 137,
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 200,
     "latency" : 143,
-    "date" : "04/10/2020 23:16:09"
-  }, {
-    "statusCode" : 200,
-    "latency" : 141,
-    "date" : "04/10/2020 23:16:14"
+    "date" : "04/10/2020 23:18:29"
   } ]
 }, {
   "name" : "Griffithstown Harriers",
@@ -60,15 +60,15 @@
   "calls" : [ {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:09"
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:14"
+    "date" : "04/10/2020 23:18:29"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:19"
+    "date" : "04/10/2020 23:18:34"
   } ]
 }, {
   "name" : "Griffithstown Harriers",
@@ -78,15 +78,15 @@
   "calls" : [ {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:09"
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:14"
+    "date" : "04/10/2020 23:18:29"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:19"
+    "date" : "04/10/2020 23:18:34"
   } ]
 }, {
   "name" : "Griffithstown Harriers",
@@ -96,15 +96,15 @@
   "calls" : [ {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:09"
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:14"
+    "date" : "04/10/2020 23:18:29"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:19"
+    "date" : "04/10/2020 23:18:34"
   } ]
 }, {
   "name" : "Griffithstown Harriers",
@@ -114,14 +114,14 @@
   "calls" : [ {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:04"
+    "date" : "04/10/2020 23:18:19"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:09"
+    "date" : "04/10/2020 23:18:24"
   }, {
     "statusCode" : 0,
     "latency" : 0,
-    "date" : "04/10/2020 23:16:14"
+    "date" : "04/10/2020 23:18:29"
   } ]
 } ]
