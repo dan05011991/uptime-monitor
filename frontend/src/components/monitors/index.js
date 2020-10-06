@@ -30,7 +30,7 @@ class MonitorControl extends Component {
         }
         return item.environment === this.state.environment;
     });
-    items = items.sort((a, b) => (a.status > b.status) ? 1 : -1)
+    items = items.sort((a, b) => (a.status > b.status) ? 1 : -1);
 
     return (   
       <div>
