@@ -1,10 +1,7 @@
 package com.uptime.monitor.models;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import static com.uptime.monitor.constants.Constants.MAX_NO_OF_CALLS;
 
@@ -13,16 +10,18 @@ public class Monitor {
     private String protocol;
     private String endpoint;
     private int port;
+    private Environment environment;
     private List<Call> calls;
 
     public Monitor() {
     }
 
-    public Monitor(String name, String protocol, String endpoint, int port) {
+    public Monitor(String name, String protocol, String endpoint, int port, Environment environment) {
         this.name = name;
         this.protocol = protocol;
         this.endpoint = endpoint;
         this.port = port;
+        this.environment = environment;
         this.calls = new ArrayList<>();
     }
 
@@ -56,6 +55,14 @@ public class Monitor {
 
     public void setPort(int port) {
         this.port = port;
+    }
+
+    public Environment getEnvironment() {
+        return environment;
+    }
+
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 
     public List<Call> getCalls() {

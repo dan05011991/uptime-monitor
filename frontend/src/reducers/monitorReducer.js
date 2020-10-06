@@ -33,7 +33,8 @@ function MonitorReducer(state = initialState, action) {
                     name: item.name,
                     endpoint: item.protocol + '://' + item.endpoint + ':' + item.port,
                     status: determineStatus(item.calls),
-                    latency: calculateLatency(item.calls)
+                    latency: calculateLatency(item.calls),
+                    environment: item.environment
                 });
             });
             return {

@@ -1,5 +1,6 @@
 package com.uptime.monitor.repositories;
 
+import com.uptime.monitor.models.Environment;
 import com.uptime.monitor.models.Monitor;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -30,7 +31,7 @@ class MonitorRepositoryTest {
         //Arrange
         MonitorRepository repo = new MonitorRepository();
         List<Monitor> monitors = new ArrayList<>(Arrays.asList(
-                new Monitor("Test", "http", "bluestructures.co.uk", 80)
+                new Monitor("Test", "http", "bluestructures.co.uk", 80, Environment.DEV)
         ));
 
         //Act

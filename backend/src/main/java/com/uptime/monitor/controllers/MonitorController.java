@@ -1,5 +1,6 @@
 package com.uptime.monitor.controllers;
 
+import com.uptime.monitor.models.Environment;
 import com.uptime.monitor.models.Monitor;
 import com.uptime.monitor.services.MonitorService;
 import com.uptime.monitor.services.RequestService;
@@ -34,8 +35,8 @@ public class MonitorController {
     }
 
     @RequestMapping(value = "/monitor", method = RequestMethod.POST)
-    public void post(String name, String protocol, String endpoint, int port) throws Exception {
-        Monitor monitor = new Monitor(name, protocol, endpoint, port);
+    public void post(String name, String protocol, String endpoint, int port, Environment environment) throws Exception {
+        Monitor monitor = new Monitor(name, protocol, endpoint, port, environment);
         if(service.get().stream().anyMatch(x -> x.toString().equalsIgnoreCase(monitor.toString()))) {
             throw new Exception("Duplicate record");
         }

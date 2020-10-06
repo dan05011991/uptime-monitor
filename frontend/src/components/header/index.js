@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import RoutingTabs from './RoutingTabs'
-import WorksOrders from '../worksOrders';
+import Monitors from '../monitors';
 
 import './styles/font.css'
 
@@ -25,16 +25,44 @@ export default function NavigationTabs(item) {
         <Route
           exact
           path="/"
-          render={() => <Redirect to="/works" />}
+          render={() => <Redirect to="" />}
         />
         <RoutingTabs
           tabs={[
             {
               label: 'Home',
-              slug: 'works',
+              slug: '',
               exact: true,
               list: true,
-              component: () => wrapper(<WorksOrders />)
+              component: () => wrapper(<Monitors />)
+            },
+            {
+              label: 'Production',
+              slug: 'production',
+              exact: true,
+              list: true,
+              component: () => wrapper(<Monitors environment="prod" />)
+            },
+            {
+              label: 'Reference',
+              slug: 'reference',
+              exact: true,
+              list: true,
+              component: () => wrapper(<Monitors environment="ref" />)
+            },
+            {
+              label: 'Integration',
+              slug: 'integration',
+              exact: true,
+              list: true,
+              component: () => wrapper(<Monitors environment="int" />)
+            },
+            {
+              label: 'Development',
+              slug: 'development',
+              exact: true,
+              list: true,
+              component: () => wrapper(<Monitors environment="dev" />)
             }
           ]}
         />

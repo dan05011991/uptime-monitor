@@ -8,13 +8,13 @@ import PropTypes from 'prop-types'
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
 
-class WorkControl extends Component {
+class MonitorControl extends Component {
 
   constructor(props) {
     super(props);
-
     this.state = {
-      title: 'Monitors'
+      title: props.environment ? props.environment.toUpperCase() : 'Monitors',
+      environment: props.environment ? props.environment.toUpperCase() : null
     };
   };
 
@@ -24,16 +24,24 @@ class WorkControl extends Component {
   };
 
   render() {
+    let items = this.props.monitors.filter((item) => {
+        if(!this.state.environment) {
+            return true;
+        }
+        return item.environment === this.state.environment;
+    });
+    items = items.sort((a, b) => (a.status > b.status) ? 1 : -1)
+
     return (   
       <div>
         <h2>{this.state.title}</h2>
-        <Grid headers={this.props.headers} data={this.props.monitors} />
+        <Grid headers={this.props.headers} data={items} />
       </div>
     );
   }
 }
 
-WorkControl.propTypes = {
+MonitorControl.propTypes = {
   monitors: PropTypes.array.isRequired,
   headers: PropTypes.array.isRequired
 };
@@ -51,4 +59,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WorkControl)
+export default connect(mapStateToProps, mapDispatchToProps)(MonitorControl)
