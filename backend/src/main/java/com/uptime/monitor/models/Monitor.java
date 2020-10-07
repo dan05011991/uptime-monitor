@@ -6,39 +6,17 @@ import java.util.*;
 import static com.uptime.monitor.constants.Constants.MAX_NO_OF_CALLS;
 
 public class Monitor {
-    private String name;
-    private String protocol;
     private String endpoint;
-    private int port;
     private Environment environment;
     private List<Call> calls;
 
     public Monitor() {
     }
 
-    public Monitor(String name, String protocol, String endpoint, int port, Environment environment) {
-        this.name = name;
-        this.protocol = protocol;
+    public Monitor(String endpoint, Environment environment) {
         this.endpoint = endpoint;
-        this.port = port;
         this.environment = environment;
         this.calls = new ArrayList<>();
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getProtocol() {
-        return protocol;
-    }
-
-    public void setProtocol(String protocol) {
-        this.protocol = protocol;
     }
 
     public String getEndpoint() {
@@ -47,14 +25,6 @@ public class Monitor {
 
     public void setEndpoint(String endpoint) {
         this.endpoint = endpoint;
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
     }
 
     public Environment getEnvironment() {
@@ -83,6 +53,6 @@ public class Monitor {
 
     @Override
     public String toString() {
-        return String.format("%s://%s:%s", protocol, endpoint, port);
+        return this.endpoint;
     }
 }

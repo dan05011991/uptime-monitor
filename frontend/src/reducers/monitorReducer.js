@@ -30,8 +30,7 @@ function MonitorReducer(state = initialState, action) {
 
             action.payload.forEach((item) => {
                 convertItems.push({
-                    name: item.name,
-                    endpoint: item.protocol + '://' + item.endpoint + ':' + item.port,
+                    endpoint: item.endpoint,
                     status: determineStatus(item.calls),
                     latency: calculateLatency(item.calls),
                     environment: item.environment
@@ -41,7 +40,7 @@ function MonitorReducer(state = initialState, action) {
                 ...state,
                 items: convertItems,
                 headers: convertHeaders([
-                    'name', 'endpoint', 'status', 'latency'
+                   'endpoint', 'status', 'latency'
                 ])
             };
         default:

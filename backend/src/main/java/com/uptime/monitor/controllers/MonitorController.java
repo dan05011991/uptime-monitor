@@ -20,7 +20,7 @@ import static com.uptime.monitor.constants.Constants.saveInterval;
 
 @RestController
 @Controller
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class MonitorController {
 
     @Autowired
@@ -35,8 +35,8 @@ public class MonitorController {
     }
 
     @RequestMapping(value = "/monitor", method = RequestMethod.POST)
-    public void post(String name, String protocol, String endpoint, int port, Environment environment) throws Exception {
-        Monitor monitor = new Monitor(name, protocol, endpoint, port, environment);
+    public void post(String endpoint, Environment environment) throws Exception {
+        Monitor monitor = new Monitor(endpoint, environment);
         if(service.get().stream().anyMatch(x -> x.toString().equalsIgnoreCase(monitor.toString()))) {
             throw new Exception("Duplicate record");
         }

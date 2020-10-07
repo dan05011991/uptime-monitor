@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend
+    volumes:
+      - ./data:/usr/webapp/data
+    networks:
+      - webapp
+    ports:
+      - 9998:8080
+
+  frontend:
+    build: ./frontend
+    networks:
+      - webapp
+    ports:
+      - 9999:80
+
+networks:
+  webapp:

@@ -19,8 +19,8 @@ public class RequestService {
     public void create(Monitor monitor) {
         try {
 
-            HttpURLConnection con = monitor.getProtocol().equalsIgnoreCase("http")
-                    ? this.createInsecure(monitor) : this.createSecure(monitor);
+            HttpURLConnection con = monitor.getEndpoint().startsWith("https")
+                    ? this.createSecure(monitor) : this.createInsecure(monitor);
 
             Instant start = Instant.now();
 
