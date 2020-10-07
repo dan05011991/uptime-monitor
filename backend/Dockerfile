@@ -5,7 +5,7 @@ WORKDIR /usr/webapp
 
 RUN mvn clean install
 
-FROM java:8
+FROM openjdk:8-jre-alpine
 
 WORKDIR /usr/webapp
 
