@@ -27,8 +27,8 @@ function calculateErrorRate(calls) {
     if(!calls || calls.length === 0) {
         return 'Calculating';
     }
-    const successes = calls.filter((item) => item.statusCode === 200).length / calls.length;
-    return (successes * 100) + '%';
+    const successes = (calls.filter((item) => item.statusCode === 200).length / calls.length) * 100;
+    return Math.round((successes + Number.EPSILON) * 100) / 100 + '%';
 }
 
 function getLongerCall(calls) {
